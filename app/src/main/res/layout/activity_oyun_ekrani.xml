@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OyunEkrani" android:background="#373535">
+
+
+ <androidx.gridlayout.widget.GridLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/grLbutonlar" android:layout_marginTop="1dp" android:layout_marginBottom="1dp"
+         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="1dp" android:layout_marginEnd="1dp"
+
+         app:rowCount="10" app:columnCount="8"
+         app:layout_constraintHorizontal_bias="0.4"/>
+ <TextView
+         android:layout_width="161dp"
+         android:layout_height="47dp"
+         android:id="@+id/hataSayisi" app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginTop="3dp" app:layout_constraintStart_toStartOf="parent"
+         android:layout_marginStart="45dp" android:textSize="20sp"
+         android:textStyle="bold" android:textAllCaps="false"
+         app:layout_constraintEnd_toStartOf="@+id/puanBilgi" android:layout_marginEnd="18dp"
+         android:layout_marginBottom="4dp" app:layout_constraintBottom_toTopOf="@+id/grLbutonlar"
+         android:textAlignment="center" app:layout_constraintVertical_bias="1.0" android:textColor="#F3EFEF"/>
+ <TextView
+         android:layout_width="170dp"
+         android:layout_height="51dp" android:id="@+id/puanBilgi"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginTop="3dp" android:layout_marginStart="18dp"
+         app:layout_constraintStart_toEndOf="@+id/hataSayisi" android:layout_marginEnd="15dp"
+         app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="1dp"
+         app:layout_constraintBottom_toTopOf="@+id/grLbutonlar" android:textSize="20sp" android:textStyle="bold"
+         android:textAllCaps="false" android:textAlignment="textStart" app:layout_constraintVertical_bias="1.0"
+         android:textColor="#EFECEC"/>
+ <Button
+         android:layout_width="87dp"
+         android:layout_height="48dp" android:id="@+id/iptalbtn"
+         app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="12dp" android:layout_marginTop="13dp"
+         app:layout_constraintTop_toBottomOf="@+id/grLbutonlar"
+         app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+         app:layout_constraintVertical_bias="1.0" app:layout_constraintEnd_toStartOf="@+id/yazilanKelime"
+         android:textColor="@color/white" android:text="İPTAL"/>
+ <TextView
+         android:layout_width="200dp"
+         android:layout_height="48dp" android:id="@+id/yazilanKelime"
+         app:layout_constraintStart_toEndOf="@+id/iptalbtn" android:layout_marginTop="18dp"
+         app:layout_constraintTop_toBottomOf="@+id/grLbutonlar" app:layout_constraintBottom_toBottomOf="parent"
+         android:layout_marginBottom="1dp" app:layout_constraintEnd_toStartOf="@+id/arabtn"
+         android:layout_marginEnd="5dp" app:layout_constraintVertical_bias="1.0" android:textSize="16sp"
+         android:textStyle="bold" android:textAlignment="center" android:textColor="#F4F3F3"/>
+ <Button
+         android:layout_width="87dp"
+         android:layout_height="48dp" android:id="@+id/arabtn"
+         android:layout_marginTop="13dp"
+         app:layout_constraintTop_toBottomOf="@+id/grLbutonlar" android:layout_marginStart="4dp"
+         app:layout_constraintStart_toEndOf="@+id/yazilanKelime"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintVertical_bias="1.0" android:layout_marginEnd="2dp"
+         app:layout_constraintEnd_toEndOf="parent" android:textColor="@color/white"
+         android:text="OK"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
